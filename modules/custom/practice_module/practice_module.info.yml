@@ -1,0 +1,10 @@
+# dev comment line
+name: Practice Module
+description: Practice Module created by Dev team.
+type: module
+core: 8.x
+# hidden: true
+# dependencies:
+  # - drupal:views
+
+package: Learning

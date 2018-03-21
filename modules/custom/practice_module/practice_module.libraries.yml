@@ -1,0 +1,7 @@
+practice-module-table:
+  version: 1.x
+  js:
+    js/practice.table.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

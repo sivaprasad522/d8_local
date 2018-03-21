@@ -1,0 +1,16 @@
+practice_module.content:
+  path: '/myPage'
+  defaults:
+   _title: 'Practice Page'
+   _controller: 'Drupal\practice_module\Controller\Practice_controller::CustomPage'
+  requirements:
+    _permission: 'access content'
+
+practice_module.basic_custom_form:
+  path: '/practice_module/form/basic_custom_form'
+  defaults:
+    _form: '\Drupal\practice_module\Form\Basic_custom_form'
+    _title: 'Basic Form'
+  requirements:
+    _access: 'TRUE'
+

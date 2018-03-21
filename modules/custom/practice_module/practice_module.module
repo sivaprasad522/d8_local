@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * Implements hook_cron()
+ */
+function practice_module_cron() {
+
+  \Drupal::logger('practice_module')->debug('custom cron');
+
+  // Query to get the list of blocks.
+  $blocks_list = \Drupal::entityTypeManager()->getStorage('block_content')->loadByProperties([
+    'type' => 'stock_exchange_rate_card'
+    ]);
+
+  foreach ($blocks_list as $key => $block_details) {
+    // \Drupal::logger('practice_module')->debug($block_details);
+  }
+}
+
+/*
+ * Alter the element type information returned from modules.
+ * hook_element_info_alter
+ */
+function practice_module_element_info_alter(array &$info) {
+
+  // if(isset($info['table'])) {
+  //   kint('if') ;
+  //   dpm($info);
+  // } else {
+  //    kint('else');
+  // }
+
+
+
+  // // Decrease the default size of textfields.
+  // if (isset($info['textfield']['#size'])) {
+  //   $info['textfield']['#size'] = 40;
+  // }
+}
